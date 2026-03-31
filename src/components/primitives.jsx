@@ -23,7 +23,8 @@ export function Sphere({position = [0,0,0], args = [1,32,32], path=null, color =
 }
 
 export function Model({ position, rotation, scale, path=null, ref }) {
-  const gltf = useGLTF(path);
+  const url = `${import.meta.env.BASE_URL}` + path;
+  const gltf = useGLTF(url);
 
   useEffect(() => {
     gltf.scene.traverse((child) => {

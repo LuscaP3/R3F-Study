@@ -9,7 +9,7 @@ import SideBar from './components/side_bar/SideBar.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     
-      <img className = 'logo' src='/dw_logo2.png'></img>
+      <img className = 'logo' src={`${import.meta.env.BASE_URL}` + '/dw_logo2.png'}></img>
       <App />
       <SideBar />
       <div className='overlay' />
